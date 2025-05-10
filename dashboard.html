@@ -19,11 +19,29 @@
         .nav a + a {
             background-color: #17a2b8;
         }
+        .lang-select {
+            margin-bottom: 20px;
+        }
     </style>
+    <script>
+        function changeLanguage(lang) {
+            alert("Dil değiştirildi: " + lang);
+            // İleride içerik dilini değiştirecek şekilde geliştirilebilir
+        }
+    </script>
 </head>
 <body>
     <h1>Hawarlaş Yönetici Paneline Hoşgeldiniz</h1>
     <p>Buradan kullanıcıları ve içerikleri manuel olarak kontrol edebilirsiniz.</p>
+
+    <div class="lang-select">
+        <label for="language">Dil Seçimi:</label>
+        <select id="language" onchange="changeLanguage(this.value)">
+            <option value="tr">Türkçe</option>
+            <option value="tk">Türkmençe</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
 
     <div class="nav">
         <a href="https://ser859.github.io/Ulanyjy-dogrula/">Cinsiyet Doğrulama Talepleri</a>
